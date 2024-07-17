@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+/*CSS FOR NAVBAR*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+.navbar-menu-container {
+  display: none;
+}
+.navbar-links-container a {
+  margin-right: 3rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: #f1c40f;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+
+}
+.navbar-menu-container svg {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*CSS FOR HOME*/
+
+.home-banner {
+  position: right;
+  display: flex;
+  padding-top: 3rem;
+}
+.home-image-section {
+  max-width: 600px;
+  flex: 1;
+}
+.home-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.primary-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #f1c40f;
+  max-width: 600px;
+}
+.primary-text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: white;
+  margin: 1.5rem 0rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*CSS FOR INPUT FIELD*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-field {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+
+/* Responsive Media Queries */
+
+@media (max-width: 768px) {
+  .navbar-links-container a {
+    margin-right: 1rem;
+    font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .primary-heading {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+  .primary-text {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+  }
+  .input-field {
+    max-width: 250px;
+  }
+  .submit-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links-container a {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .primary-heading {
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
+  }
+  .primary-text {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+  }
+  .input-field {
+    max-width: 200px;
+  }
+  .submit-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
   }
 }

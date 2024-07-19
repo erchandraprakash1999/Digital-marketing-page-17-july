@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../Components/Assets/logo.svg";
+import logo from "../Components/Assets/logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -11,10 +11,11 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
-import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
-import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaBlog } from "react-icons/fa";
+import { RiServiceLine } from "react-icons/ri";
+import { FaQuestion } from "react-icons/fa";
+
 
 
 const Navbar = () => {
@@ -25,20 +26,20 @@ const Navbar = () => {
       icon: <HomeIcon />,
     },
     {
+      text: "Services",
+      icon: <RiServiceLine />,
+    },
+    {
+      text: "Blog",
+      icon: <FaBlog />,
+    },
+    {
       text: "About",
       icon: <InfoIcon />,
     },
     {
-      text: "Testimonials",
-      icon: <CommentRoundedIcon />,
-    },
-    {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />,
-    },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
+      text: "FAQ",
+      icon:<FaQuestion /> ,
     },
   ];
   return (
@@ -47,7 +48,7 @@ const Navbar = () => {
         <img src={logo} alt="" />
       </div>
       <div className="navbar-links-container">
-      <button  style={{ textDecoration: 'none', color: 'white', background: 'none', border: 'none', padding: 0, cursor: 'pointer',marginRight:'20px', fontSize:'20px',fontWeight:'bold' }}>
+      <button  style={{ textDecoration: 'none', color: 'white', background: 'none', border: 'none', padding: 0, cursor: 'pointer',marginRight:'20px',marginLeft:'300px', fontSize:'20px',fontWeight:'bold' }}>
         Home
       </button>
 
